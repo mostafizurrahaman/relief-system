@@ -4,9 +4,9 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "build": "tsc",
-    "dev": "tsnd --respawn src/server.ts",
-    "start": "node dist/server.js",
+    "build": "node init && tsc",
+    "dev": "node init && tsnd --respawn src/server.ts",
+    "start": "node init && node dist/server.js",
     "migrate": "npx prisma migrate dev",
     "postinstall": "npx prisma generate",
     "db:push": "npx prisma db push",
@@ -36,6 +36,7 @@
     "express": "^4.19.2",
     "http-status": "^1.7.4",
     "jsonwebtoken": "^9.0.2",
+    "node-fetch": "^3.3.2",
     "query-string": "^9.1.0",
     "ts-node": "^10.9.2",
     "zod": "^3.23.8"
